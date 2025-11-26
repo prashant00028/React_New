@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.parent{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cards{
+  width: 350px;
+  border: 2px solid pink;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgb(105, 104, 102);
+}
+.cards button{
+  padding: 10px 20px ;
+  border-radius: 10px;
+  border: none;
+  background-color:white;
+  color: black;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.cards p{
+  margin: 20px 0;
+}
+.cards img{
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
