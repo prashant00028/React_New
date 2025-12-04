@@ -1,16 +1,13 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
+import Hero from './Hero'
+import Arrow from './Arrow'
 
 const Leftcontent = () => {
   return (
-    <div className='h-[75vh] w-1/3 bg-blue-500'>
-      <div>
-
-      </div>
-
-      <div className='text-8xl' >
-          <i class="ri-arrow-right-up-line"></i>
-      </div>
+    <div className='h-[75vh] w-1/3 flex flex-col justify-between'>
+      <Hero/>
+      <Arrow/>
     </div>
   )
 }
