@@ -8,12 +8,16 @@ import Contact from './pages/Contact'
 import Notfound from './Notfound'
 import Chat from './components/Chat'
 import Call from './components/Call'
+import Courses from './pages/Courses'
+import Coursedetails from './Coursedetails'
+import Navbar2 from './components/Navbar2'
 
 
 const App = () => {
   return (
     <div className='h-screen bg-black text-white'>
       <Navbar/>
+      <Navbar2/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
@@ -21,6 +25,8 @@ const App = () => {
           <Route path='/contact/chat' element={<Chat/>}/>
           <Route path='/contact/call' element={<Call/>}/>
         </Route>
+        <Route path='/courses' element={<Courses/>}/>
+        <Route element={<Coursedetails/>} path='/courses/:courseId'/>
         <Route path='*' element={<Notfound/>}/>
 
       </Routes>
