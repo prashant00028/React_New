@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 const TODO = () => {
     const [task, setTask] = useState("")
-    const [todos, setTodos] = useState([])
+    const [todos , setTodos] = useState(() => {
+        const savedata = localStorage.getItem("todos");
+        return savedata ? JSON.parse(savedata) : [];
+      })
+
+    useEffect(()=>{
+        localStorage.setItem("todos",JSON.stringify(todos));
+    },[todos]);
 
     return (
         <div className='todo-container'>
